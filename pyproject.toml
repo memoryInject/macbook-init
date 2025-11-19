@@ -1,0 +1,23 @@
+[project]
+name = "macbook-dotfile"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = []
+
+[dependency-groups]
+dev = [
+    "ipython>=9.7.0",
+    "pyre-check>=0.9.25",
+    "pytest>=9.0.1",
+    "pytest-cov>=7.0.0",
+    "ruff>=0.14.5",
+]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+addopts = [
+    "--import-mode=importlib", "--cov=src",
+]
+

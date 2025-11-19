@@ -1,0 +1,50 @@
+{
+  "bash": [
+    {
+      "name": "Install Homebrew",
+      "script": "./scripts/01_install_homebrew.sh",
+      "order": 10
+    },
+    {
+      "name": "Install oh-my-zsh",
+      "script": "./scripts/02_install_ohmysh.sh",
+      "order": 20
+    },
+    {
+      "name": "Install oh-my-zsh plugins",
+      "script": "./scripts/03_install_ohmyzsh_plugins.sh",
+      "order": 30,
+      "show_log": true,
+      "show_dialog": true
+    },
+    {
+      "name": "Install dir-bookmark",
+      "script": "./scripts/04_install_dir_bookmark.sh",
+      "order": 40
+    },
+    {
+      "name": "Install nvm",
+      "script": "./scripts/05_install_nvm.sh",
+      "order": 50
+    },
+    {
+      "name": "Install uv for python",
+      "script": "./scripts/06_install_uv.sh",
+      "order": 60
+    },
+    {
+      "name": "Install neovim",
+      "script": "./scripts/07_install_nvim.sh",
+      "order": 70
+    },
+    {
+      "name": "Install nvim config",
+      "script": "./scripts/08_install_nvim_config.sh",
+      "order": 80
+    }
+  ],
+  "dmg": [
+    "https://github.com/alacritty/alacritty/releases/download/v0.16.1/Alacritty-v0.16.1.dmg",
+    "https://desktop.docker.com/mac/main/arm64/Docker.dmg"
+  ]
+}

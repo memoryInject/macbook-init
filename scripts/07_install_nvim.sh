@@ -1,0 +1,11 @@
+VERSION="v0.11.1"
+URL="https://github.com/neovim/neovim/releases/download/$VERSION/nvim-macos-arm64.tar.gz"
+DEST="$HOME/nvim-macos/$VERSION"
+TMP="$(mktemp -d)"
+curl -L "$URL" -o "$TMP/nvim.tar.gz"
+xattr -c "$TMP/nvim.tar.gz" || true
+tar -xzf "$TMP/nvim.tar.gz" -C "$TMP"
+mkdir -p "$DEST"
+mv "$TMP/nvim-macos-arm64"/* "$DEST"
+rm -rf "$TMP"
+echo "$DEST/bin/nvim"
