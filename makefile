@@ -1,4 +1,4 @@
-.PHONY: init run update
+.PHONY: run test check format
 
 run: 
 	uv run main.py
