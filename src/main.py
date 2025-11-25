@@ -1,6 +1,7 @@
 import json
 import re
 from pathlib import Path
+from typing import List
 
 from lib.dmg import DmgManagement
 from lib import bash
@@ -27,7 +28,7 @@ def run_bash_task(script_path: Path, show_log=True, show_dialog=True):
         console.info(result.stdout)
 
 
-def run_dmg_tasks(urls: list[str]):
+def run_dmg_tasks(urls: List[str]):
     """Execute DMG installation tasks."""
     for url in urls:
         dmg = DmgManagement(url=url, show_dialog=True)

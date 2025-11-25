@@ -6,6 +6,7 @@ import urllib.request
 import shutil
 import time
 import sys
+from typing import Optional
 
 from lib.tui import confirm, console
 from utils.errors import UserCancelled
@@ -15,11 +16,11 @@ class DmgManagement:
     def __init__(self, url: str, show_dialog: bool = False) -> None:
         self.url = url
         self.show_dialog = show_dialog
-        self.tmpdir: str | None = None
-        self.dmg_path: str | None = None
+        self.tmpdir: Optional[str] = None
+        self.dmg_path: Optional[str] = None
         self.dmg_name: str = os.path.basename(self.url)
-        self.disk_id: str | None = None
-        self.mount_point: str | None = None
+        self.disk_id: Optional[str] = None
+        self.mount_point: Optional[str] = None
 
     def run(self):
         console.box(f"Download and install {self.dmg_name}", color="bright_blue")

@@ -1,10 +1,11 @@
 import subprocess
+from typing import Union, List
 
 from lib.tui import console, confirm
 from utils.errors import UserCancelled
 
 
-def run(cmd: str | list[str], show_log: bool = True, show_dialog: bool = True):
+def run(cmd: Union[str, List[str]], show_log: bool = True, show_dialog: bool = True):
     if show_log:
         console.warning(f"executing shell command: {cmd}")
 
