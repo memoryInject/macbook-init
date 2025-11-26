@@ -7,7 +7,7 @@
     },
     {
       "name": "Install oh-my-zsh",
-      "script": "./scripts/02_install_ohmysh.sh",
+      "script": "./scripts/02_install_ohmyzsh.sh",
       "order": 20
     },
     {
