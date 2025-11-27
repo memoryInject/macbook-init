@@ -12,3 +12,7 @@ wheels/
 
 .ruff_cache/
 .pyre/
+.pytest_cache
+
+#Misc
+.DS_Store

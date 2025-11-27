@@ -21,11 +21,11 @@ def parse_prefix(filename: str):
 def run_bash_task(script_path: Path, show_log=True, show_dialog=True):
     """Execute a bash script."""
     cmd = f"bash {script_path}"
-    result = bash.run(cmd, show_log=show_log, show_dialog=show_dialog)
-    if result.stderr:
-        console.error(result.stderr)
-    else:
-        console.info(result.stdout)
+
+    try:
+        bash.run(cmd, show_log=show_log, show_dialog=show_dialog)
+    except BaseException as e:
+        console.error(e)
 
 
 def run_dmg_tasks(urls: List[str]):

@@ -17,7 +17,6 @@ def run(cmd: Union[str, List[str]], show_log: bool = True, show_dialog: bool = T
         cmd,
         shell=True,
         executable="/bin/bash",
-        capture_output=True,
         check=True,
         text=True,
     )
