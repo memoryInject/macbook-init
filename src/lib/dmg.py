@@ -64,8 +64,10 @@ class DmgManagement:
 
         # Set quarantine attribute
         quarantine_value = f"0081;{hex(int(time.time()))[2:]};Python;"
-        os.system(f'xattr -w com.apple.quarantine "{quarantine_value}" "{self.dmg_path}"')
-    
+        os.system(
+            f'xattr -w com.apple.quarantine "{quarantine_value}" "{self.dmg_path}"'
+        )
+
         console.success("Download complete.\n")
 
     def mount_dmg(self):
