@@ -41,6 +41,11 @@
       "name": "Install nvim config",
       "script": "./scripts/08_install_nvim_config.sh",
       "order": 80
+    },
+    {
+      "name": "Install tmux plugins",
+      "script": "./scripts/09_install_tmux_plugins.sh",
+      "order": 90
     }
   ],
   "dmg": [
